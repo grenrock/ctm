@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pinkColor: #e1539c;
+  --lightPinkColor: #e76b97;
+  --brightPinkColor: #ff5171;
+  --brightPinkBgColor1: #f51485;
+  --brightPinkBgColor2: #d24e8d;
+  --violetColor: #9376a9;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.loading .bubble {
+  text-align: center;
+  animation: jump 1s ease-in-out infinite;
+  color: var(--pinkColor);
+  font-family: 'Arial Black';
+  text-shadow: 0 0 10px var(--violetColor);
+  opacity: 0.5;
+}
+.loading .bubble:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading .bubble:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loading .bubble:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+    color: #f1adad;
+    text-shadow: 0 0 10px #ea89cb;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+}
+
+.foxdale-bg {
+  background-color: #0e0e0e;
+}
+
+.foxdale-footer-bg {
+  background-color: rgba(16, 13, 15, 0.33);
+  backdrop-filter: blur(2px);
+}
+
+.foxdale-pink-bg {
+  background-color: var(--brightPinkColor);
+}
+
+.foxdale-pink-text {
+  color: var(--lightPinkColor);
+}
+
+.foxdale-glow-text {
+  color: #fff3f3;
+  text-shadow: 0 0 15px var(--brightPinkColor),
+    0 0 25px var(--brightPinkBgColor2), 0 0 55px var(--violetColor);
+}
+
+.foxdale-glow-box {
+  box-shadow: 0 0 15px var(--brightPinkColor),
+    0 0 25px var(--brightPinkBgColor2), 0 0 55px var(--violetColor);
+}
+
+.foxdale-menu-text {
+  color: #9a6992;
+}
+
+.foxdale-menu-text:hover {
+  color: #d39cb7;
+  text-shadow: 0 0 15px var(--violetColor);
+}
+
+.foxdale-link {
+  color: #c984bd;
+}
+
+.foxdale-link:hover {
+  color: #eca6bc;
+  text-shadow: 0 0 15px var(--violetColor);
+}
+
+.foxdale-button {
+  padding: 0.5rem 2rem;
+  display: flex;
+  background-color: #1f1625;
+  color: #fce2e0;
+  text-shadow: 0 0 8px var(--brightPinkBgColor2), 0 0 13px var(--violetColor);
+  border-width: 1px;
+  border-top-color: #ecd4db;
+  border-right-color: #ecbbdb;
+  border-bottom-color: #7e626e;
+  border-left-color: #ceb0bb;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  font-family: 'Arial Black';
+  box-shadow: 0 0 3px var(--brightPinkColor), 0 0 5px var(--brightPinkBgColor2),
+    0 0 11px var(--violetColor);
+  outline: 0;
+}
+
+.foxdale-button:hover {
+  color: #fff;
+  box-shadow: 0 0 5px var(--brightPinkColor), 0 0 8px var(--brightPinkBgColor2),
+    0 0 15px var(--violetColor);
+  text-shadow: 0 0 3px var(--brightPinkColor),
+    0 0 20px var(--brightPinkBgColor2), 0 0 50px var(--violetColor);
+}
+
+.foxdale-button:disabled {
+  color: #a9a1a1;
+  background-color: #6b5f7c;
+  box-shadow: 0 0 15px var(--violetColor);
+  text-shadow: 0 0 0px #000;
+}
+
+.foxdale-button-plain {
+  padding: 0.5rem 2rem;
+  display: flex;
+  background-color: #ef5293;
+  /*background-image: linear-gradient(#fff4f4 5%, #f1b9c1, #e880a8, #ec91bf);*/
+  color: #ffffff;
+  border-radius: 0.25rem;
+  font-size: 1.125rem;
+  outline: 0;
+}
+
+.foxdale-gallery-link {
+  color: #9a6992;
+}
+
+.foxdale-gallery-link:hover {
+  color: #eca6bc;
+  text-shadow: 0 0 15px var(--violetColor);
+  cursor: pointer;
+}
+
+.about-p {
+  margin-bottom: 0.75rem;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+}
+
+.about-caption {
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.image-slider {
+  display: flex;
+  margin-right: 15%;
+  margin-left: 15%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border-top: 25px solid #1e1e1e;
+  border-bottom: 25px solid #1e1e1e;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 12rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #f7fafc;
+  border-width: 1px;
+  border-color: #cbd5e0;
+  border-radius: 0.25rem;
+  resize: none;
+}
+
+textarea:focus {
+  outline: 0;
+  border-color: #f56565;
+}
+
+textarea:disabled {
+  background-color: #7e626e;
+}
+
+input:disabled {
+  background-color: #7e626e;
+}
+
+button:disabled {
+  cursor: default;
+}

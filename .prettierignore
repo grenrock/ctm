@@ -1,0 +1,4 @@
+/dist
+/coverage
+/tools/generators/**/files/
+/node_modules
