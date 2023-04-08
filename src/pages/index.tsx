@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PageTitle, InitialTransition } from '@/components';
+import { PageTitle, InitialTransition, AboutParagraph } from '@/components';
 import { application } from 'src/constants';
 
 const contentAnimation = (isFirstMount: boolean) => ({
@@ -48,17 +48,12 @@ function IndexPage(props: IndexPageProps) {
         className="space-y-12"
       >
         <PageTitle
-          pageTitle={props.signedIn ? 'Welcome, cutie' : "Foxdale's Clubhouse"}
+          pageTitle="Community Team Management"
           description={null}
         />
-        <motion.section
-          variants={imageSliderAnimation}
-          className="text-gray-700 body-font text-center"
-        >
-          <div className="image-slider foxdale-glow-box">
-            <img src="https://foxdale-images-202205271037.s3.us-west-1.amazonaws.com/shnj-cover+copy.jpg" />
-          </div>
-        </motion.section>
+        <AboutParagraph>
+          Stuff.
+        </AboutParagraph>
       </motion.div>
     </motion.section>
   );

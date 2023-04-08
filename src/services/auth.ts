@@ -6,7 +6,6 @@ import { createUser, getUser } from '@/utils/mysql';
 import { redisDel, redisGet, redisSet } from '@/utils/redis';
 import { decodeAccessToken } from '@/utils/token';
 import { ok } from '@/utils/api';
-import { NextApiResponse } from 'next';
 import short from 'short-uuid';
 import type { AuthObject } from '@/utils/auth';
 import { createAuthObject, createCookieArray } from '@/utils/auth';
@@ -26,7 +25,7 @@ export async function signInService(
     };
   }
   const signInParams = {
-    ClientId: process.env.FOXDALE_CLIENT_ID || '',
+    ClientId: process.env.CTM_CLIENT_ID || '',
     AuthFlow: 'USER_PASSWORD_AUTH',
     AuthParameters: {
       USERNAME: user.id,
@@ -79,7 +78,7 @@ export async function refreshTokenService(
   refreshToken: string,
 ): Promise<SessionDtoRes> {
   const params = {
-    ClientId: process.env.FOXDALE_CLIENT_ID || '',
+    ClientId: process.env.CTM_CLIENT_ID || '',
     AuthFlow: 'REFRESH_TOKEN',
     AuthParameters: {
       REFRESH_TOKEN: refreshToken,
@@ -211,7 +210,7 @@ export async function signUpService(username: string): Promise<SignUpDtoRes> {
   const user = await getUser(username, 'username');
   const tempPassword = short.generate();
   const params = {
-    UserPoolId: process.env.FOXDALE_USER_POOL_ID || '',
+    UserPoolId: process.env.CTM_USER_POOL_ID || '',
     Username: user.id.toString(),
     TemporaryPassword: tempPassword,
   };

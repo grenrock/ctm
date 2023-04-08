@@ -26,15 +26,7 @@ type PagePropsWithLayout = {
 
 function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
   const [isFirstMount, setIsFirstMount] = React.useState(true);
-  const [hasConfirmed, setHasConfirmed] = React.useState(false);
   const [signedIn, setSignedIn] = React.useState(false);
-  React.useEffect(() => {
-    const confirmed = localStorage.getItem('confirmed');
-    if (confirmed) {
-      setHasConfirmed(true);
-      setIsFirstMount(false);
-    }
-  }, []);
 
   React.useEffect(() => {
     const handleRouteChange = () => {
@@ -60,11 +52,9 @@ function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
   };
 
   return (
-    <div className="foxdale-bg">
+    <div className="ctm-bg">
       <SeoHeader {...seoProps} />
       <SiteLayout
-        hasConfirmed={hasConfirmed}
-        setHasConfirmed={setHasConfirmed}
         signedIn={signedIn}
         setSignedIn={setSignedIn}
       >

@@ -2,10 +2,6 @@ import { motion } from 'framer-motion';
 import { animationDuration } from 'src/constants';
 import React from 'react';
 
-type AboutPageTextElementProps = {
-  text: string;
-};
-
 type AboutPageImageElementProps = {
   src: string;
   caption: string;
@@ -35,25 +31,25 @@ const imageAnimation = {
   },
 };
 
-export const AboutHeader: React.FC<AboutPageTextElementProps> = ({ text }) => {
+export const AboutHeader: React.FC<React.PropsWithChildren> = (props) => {
   return (
-    <h1 className="foxdale-glow-text text-4xl font-black text-gray-600 text-center mb-5">
-      {text}
+    <h1 className="ctm-nav-link text-4xl font-black text-gray-600 text-center mb-5">
+      {props.children}
     </h1>
   );
 };
 
-export const AboutParagraph: React.FC<AboutPageTextElementProps> = ({
-  text,
-}) => {
+export const AboutParagraph: React.FC<React.PropsWithChildren> = (
+  props
+) => {
   return (
     <motion.div
       animate="animate"
       initial="initial"
       variants={paragraphAnimation}
-      className="mx-auto px-4 text-base leading-relaxed text-gray-500"
+      className="mx-auto px-8 text-base lg:w-1/2 md:w-2/3 leading-relaxed text-gray-500"
     >
-      <p className="about-p">{text}</p>
+      {props.children}
     </motion.div>
   );
 };

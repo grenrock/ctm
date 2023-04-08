@@ -34,7 +34,7 @@ export const PageTitle: React.FC<PageTitleProps> = ({
       variants={titleAnimation}
       className="text-6xl font-black text-gray-600 text-center mt-8"
     >
-      <span className="foxdale-glow-text">{pageTitle}</span>
+      <span className="ctm-nav-link">{pageTitle}</span>
       {description && (
         <motion.div
           variants={contentAnimation}

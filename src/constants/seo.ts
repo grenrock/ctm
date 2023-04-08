@@ -1,12 +1,9 @@
-const url = 'https://foxdale.gay';
-const title = 'foxdale.gay';
-const description = 'p gay';
+const url = 'https://communityteammanagement';
+const title = 'communityteammanagement';
+const description = 'site';
 const image = '';
 
 const locale = 'en-US';
-
-const twitter = '@foxdaleaxelrod';
-const instagram = 'foxdaleaxelrod';
 
 export const application = {
   url,
@@ -14,8 +11,4 @@ export const application = {
   description,
   image,
   locale,
-  social: {
-    twitter,
-    instagram,
-  },
 };

@@ -17,7 +17,7 @@ export const GalleryImage: React.FC<GalleryImageProps> = ({
   link,
 }) => {
   return (
-    <div className="w-full mx-4 mb-20 lg:w-1/5 lg:h-full md:w-1/3 foxdale-gallery-link">
+    <div className="w-full mx-4 mb-20 lg:w-1/5 lg:h-full md:w-1/3 ctm-gallery-link">
       <Link href={link}>
         <a className="relative block h-full overflow-hidden rounded">
           <img

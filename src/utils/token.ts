@@ -19,7 +19,7 @@ export async function decodeAccessToken(
   
     Return a JSON representation of the decoded token.
      */
-  const jwk = await fetchKeys(process.env.FOXDALE_USER_POOL_ID || '');
+  const jwk = await fetchKeys(process.env.CTM_USER_POOL_ID || '');
 
   const rsaPublicKey = await importJWK(jwk.keys[1], jwk.keys[1].alg);
   try {

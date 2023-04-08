@@ -50,13 +50,13 @@ export function createCookieArray(
 ) {
   let domain: string;
   if (!host) {
-    domain = 'foxdale.gay';
-  } else if (host.includes('dev.foxdale.gay')) {
-    domain = 'dev.foxdale.gay';
+    domain = 'communityteammanagement.com';
+  } else if (host.includes('dev-communityteammanagement.com')) {
+    domain = 'dev-communityteammanagement.com';
   } else if (host.includes('localhost')) {
     domain = 'localhost';
   } else {
-    domain = 'foxdale.gay';
+    domain = 'communityteammanagement.com';
   }
   const cookieArray = [];
   const options = {

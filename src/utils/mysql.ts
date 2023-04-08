@@ -5,10 +5,10 @@ type UserColumns = 'id' | 'username';
 
 async function runQuery(query: string) {
   const conn = mysql.createConnection({
-    host: process.env.FOXDALE_MYSQL_HOST || 'localhost',
-    user: process.env.FOXDALE_MYSQL_USER || 'root',
-    password: process.env.FOXDALE_MYSQL_PASSWORD || '',
-    database: process.env.FOXDALE_MYSQL_DATABASE || 'foxdale',
+    host: process.env.CTM_MYSQL_HOST || 'localhost',
+    user: process.env.CTM_MYSQL_USER || 'root',
+    password: process.env.CTM_MYSQL_PASSWORD || '',
+    database: process.env.CTM_MYSQL_DATABASE || 'ctm',
   });
   return new Promise<any>((resolve) => {
     conn.execute(query, (err, results) => {

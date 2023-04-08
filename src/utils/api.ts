@@ -24,7 +24,7 @@ export function getBaseUrl(host: string) {
   if (host.includes('localhost')) {
     return `http://localhost:3000`;
   } else {
-    return `https://foxdale.gay`;
+    return `https://communityteammanagement.com`;
   }
 }
 
@@ -32,6 +32,6 @@ export function getBaseApiUrl(host: string) {
   if (host.includes('localhost')) {
     return `http://localhost:3000/api/${process.env.NEXT_PUBLIC_API_VERSION}`;
   } else {
-    return `https://foxdale.gay/api/${process.env.NEXT_PUBLIC_API_VERSION}`;
+    return `https://communityteammanagement.com/api/${process.env.NEXT_PUBLIC_API_VERSION}`;
   }
 }

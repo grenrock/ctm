@@ -15,8 +15,8 @@ const Loading = () => {
         variants={contentAnimation}
         className="space-y-12"
       >
-        <div className="pt-32 flex justify-center w-full h-full foxdale-glow-text text-lg font-black">
-          Loading this gay shit. Just a sec.
+        <div className="pt-32 flex justify-center w-full h-full ctm-nav-link text-lg font-black">
+          ...
         </div>
       </motion.div>
     </motion.section>

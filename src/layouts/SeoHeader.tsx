@@ -10,7 +10,7 @@ export interface SeoHeaderProps {
   application?: any; // todo
 }
 
-const { url, locale, social } = application;
+const { url, locale } = application;
 
 export const SeoHeader = ({
   title = application.title,
@@ -20,7 +20,6 @@ export const SeoHeader = ({
   const openGraphImageUrl = `${url}${image}`;
   const pathName = useRouter().pathname;
   const pathFullUrl = pathName === '/' ? url : url + pathName;
-  const twitterHandle = social.twitter || '';
 
   return (
     <NextSeo
@@ -42,11 +41,6 @@ export const SeoHeader = ({
           },
         ],
         site_name: title,
-      }}
-      twitter={{
-        handle: twitterHandle,
-        site: twitterHandle,
-        cardType: 'summary_large_image',
       }}
     />
   );
