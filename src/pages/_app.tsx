@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
     return () => {
       router.events.off('routeChangeStart', handleRouteChange);
     };
-  }, []);
+  }, [isFirstMount, router.events]);
 
   const seoProps = Component.getSeo ? Component.getSeo() : {};
 
