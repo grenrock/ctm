@@ -1,5 +1,5 @@
 const url = 'https://communityteammanagement';
-const title = 'communityteammanagement';
+const title = 'Community Team Management';
 const description = 'site';
 const image = '';
 
