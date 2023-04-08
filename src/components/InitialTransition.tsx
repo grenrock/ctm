@@ -52,7 +52,7 @@ export const InitialTransition: React.FC<InitialTransitionProps> = ({
 }) => {
   return (
     <motion.div
-      className="absolute z-50 flex items-center justify-center w-full h-full ctm-bg"
+      className="absolute z-50 flex items-center justify-center text-center w-full h-full ctm-bg"
       initial="initial"
       animate="animate"
       variants={blackBoxAnimation}
@@ -64,13 +64,24 @@ export const InitialTransition: React.FC<InitialTransitionProps> = ({
     >
       <motion.div
         variants={textContainerAnimation}
-        className="absolute z-50 flex"
+        className="absolute z-50 flex -mt-12"
       >
         <motion.div
           variants={textAnimation}
           className="text-3xl font-bold ctm-nav-link"
         >
           Community Team Management
+        </motion.div>
+      </motion.div>
+      <motion.div
+        variants={textContainerAnimation}
+        className="absolute z-50 flex mt-12"
+      >
+        <motion.div
+          variants={textAnimation}
+          className="text-4l font-bold ctm-nav-link"
+        >
+          Welcome to our team!
         </motion.div>
       </motion.div>
     </motion.div>
