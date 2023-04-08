@@ -45,7 +45,7 @@ function IndexPage(props: IndexPageProps) {
         initial="initial"
         animate="animate"
         variants={contentAnimation(props.isFirstMount)}
-        className="space-y-12"
+        className="space-y-8"
       >
         <PageTitle pageTitle="Community Team Management" description={null} />
         <AboutParagraph>

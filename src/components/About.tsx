@@ -39,9 +39,7 @@ export const AboutHeader: React.FC<React.PropsWithChildren> = (props) => {
   );
 };
 
-export const AboutParagraph: React.FC<React.PropsWithChildren> = (
-  props
-) => {
+export const AboutParagraph: React.FC<React.PropsWithChildren> = (props) => {
   return (
     <motion.div
       animate="animate"
