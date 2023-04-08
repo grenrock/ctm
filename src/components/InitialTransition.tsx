@@ -68,9 +68,9 @@ export const InitialTransition: React.FC<InitialTransitionProps> = ({
       >
         <motion.div
           variants={textAnimation}
-          className="text-4xl font-bold ctm-nav-link"
+          className="text-3xl font-bold ctm-nav-link"
         >
-          communityteammanagement
+          Community Team Management
         </motion.div>
       </motion.div>
     </motion.div>
