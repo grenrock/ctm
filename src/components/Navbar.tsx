@@ -47,17 +47,22 @@ export const Navbar: React.FC<NavbarProps> = ({ signedIn, setSignedIn }) => {
         <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
           <Link href="/">
             <a className="flex items-center mb-4 font-medium text-white title-font md:mb-0 w-12">
-              <img src="https://ctm-images-20230408.s3.us-west-1.amazonaws.com/logo.jpg"/>
+              <img src="https://ctm-images-20230408.s3.us-west-1.amazonaws.com/logo.jpg" />
             </a>
           </Link>
           <nav className="flex flex-wrap items-center space-x-4 justify-center text-base md:ml-auto">
             <Link href="/">
+              <a className={asPath === '/' ? 'ctm-nav-link' : 'ctm-menu-text'}>
+                Home
+              </a>
+            </Link>
+            <Link href="/contact">
               <a
                 className={
-                  asPath === '/' ? 'ctm-nav-link' : 'ctm-menu-text'
+                  asPath === '/contact' ? 'ctm-nav-link' : 'ctm-menu-text'
                 }
               >
-                Home
+                Get a Quote
               </a>
             </Link>
             {!signedIn && (

@@ -1,4 +1,4 @@
-import { CognitoIdentityServiceProvider } from 'aws-sdk';
+import { CognitoIdentityServiceProvider, SES } from 'aws-sdk';
 
 const options = {
   region: process.env.CTM_AWS_REGION,
@@ -8,4 +8,8 @@ const options = {
 
 export function getCognitoService() {
   return new CognitoIdentityServiceProvider(options);
+}
+
+export function getSesService() {
+  return new SES(options);
 }
