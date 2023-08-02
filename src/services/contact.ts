@@ -12,8 +12,8 @@ export default async function sendContactRequest(
   const textBody = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nAssociation Name: ${assocName}\nAssociation Addr: ${assocAddr}\nAdditional Details: ${details}`;
   const params = {
     Destination: {
-      // ToAddresses: ['gwyn@communityteammanagement.com'],
-      ToAddresses: ['tevgrenrock@gmail.com'],
+      ToAddresses: ['gwyn@communityteammanagement.com'],
+      // ToAddresses: ['tevgrenrock@gmail.com'],
     },
     Message: {
       Body: {
