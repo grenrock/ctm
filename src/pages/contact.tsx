@@ -43,7 +43,6 @@ function ContactPage(props: ContactPageProps) {
     }).then((res) => {
       setLoading(false);
       if (res.status === 201) {
-        sessionStorage.setItem('contact', 'success');
         setSendSuccess(true);
       } else {
         setSendFailure(true);
@@ -51,7 +50,7 @@ function ContactPage(props: ContactPageProps) {
     });
   };
 
-  if (sendSuccess || sessionStorage.getItem('contact')) {
+  if (sendSuccess) {
     return (
       <div className="mx-auto -mt-24 flex items-center justify-center h-screen text-base lg:w-1/4 md:w-2/3 text-gray-500">
         <Group position="center">
