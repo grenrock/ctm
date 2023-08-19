@@ -65,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ signedIn, setSignedIn }) => {
                 Get a Quote
               </a>
             </Link>
-            {!signedIn && (
+            {/* {!signedIn && (
               <Link href="/sign-in">
                 <a
                   className={
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ signedIn, setSignedIn }) => {
                   Sign In
                 </a>
               </Link>
-            )}
+            )} */}
           </nav>
         </div>
       </motion.div>

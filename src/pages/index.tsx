@@ -65,7 +65,7 @@ function IndexPage(props: IndexPageProps) {
           as much as possible, but our top-of-the-line Vantaca and AvidXchange
           software programs ensure the most secure and comprehensive financial
           reporting and provide the online payment options, owner account
-          portals, and easy access to HOA documants.
+          portals, and easy access to HOA documents.
         </AboutParagraph>
         <AboutParagraph>
           Community Team Management LLC is an employee-owned and operated
